@@ -9,8 +9,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: kube-prometheus-stack-prometheus
+      app: todoapp
+  namespaceSelector:
+    matchNames:
+    - todoapp
   endpoints:
-  - port: http-web
+  - port: web
     path: /metrics
     interval: 10s

@@ -1,3 +1,7 @@
+from prometheus_client import generate_latest, Counter
+from django.http import HttpResponse
+
+
 GET_REQUESTS = Counter("django_http_get_requests_total", "Total GET HTTP requests")
 POST_REQUESTS = Counter("django_http_post_requests_total", "Total POST HTTP requests")
 
